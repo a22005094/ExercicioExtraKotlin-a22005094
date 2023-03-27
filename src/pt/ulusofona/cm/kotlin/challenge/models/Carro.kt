@@ -31,4 +31,14 @@ class Carro : Veiculo, Ligavel {
     override fun estaLigado(): Boolean {
         return this.motor.estaLigado()
     }
+
+    // Será isto em falta...?
+    override fun moverPara(x: Int, y: Int) {
+        super.moverPara(x, y)
+
+        // "Caso o veículo seja ligável, o mesmo deverá permanecer
+        // no estado desligado assim que a sua movimentação estiver concluída"
+        this.desligar()
+    }
+
 }
