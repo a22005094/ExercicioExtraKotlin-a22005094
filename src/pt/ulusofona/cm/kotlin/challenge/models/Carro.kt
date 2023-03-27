@@ -38,7 +38,7 @@ class Carro : Veiculo, Ligavel {
 
         // "Caso o veículo seja ligável, o mesmo deverá permanecer
         // no estado desligado assim que a sua movimentação estiver concluída"
-        if (!estaLigado()) {
+        if (estaLigado()) {
             this.desligar()
         }
     }
